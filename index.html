@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+    <title>MapBox</title> 
+</head> 
+<body> 
+    <div class="main-container mt-3"> 
+        <div class="heading"><h1>MapBox</h1></div>
+
+        <!-- Location Search -->
+        <label for="map-location" class="mt-2"> 
+            <input type="text" name="" id="map-location" placeholder="Search Location here..." class="bg-white color-black"> 
+        </label>
+        <!-- Suggestions -->
+        <div id="suggestions" class="suggestions-list"></div>
+        
+        <!-- Map Style Selector -->
+        <div class="d-flex justify-content-center px-2 mt-3">
+            <select id="map-style"> 
+                <option value="streets-v11">Normal View</option> 
+                <option value="satellite-v9">Satellite View</option> 
+                <option value="dark-v10">Dark View</option> 
+                <option value="light-v10">Light View</option> 
+            </select> 
+        </div>
+
+        <!-- Fullscreen Icon -->
+        <div id="fullscreen-btn" class="fullscreen-icon">
+            <button id="fullscreen-icon">&#x26F6;</button>
+        </div>
+
+        <!-- Map Div -->
+        <div id="map" class="mt-4"></div> 
+        <div id="coordinates" class="mt-2" style="font-weight: bold;"></div> 
+    </div> 
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script> 
+    <script src="app.js"></script> 
+</body> 
+</html>
